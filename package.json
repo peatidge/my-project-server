@@ -4,12 +4,20 @@
   "description": "Project for bla bla bla",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha --timeout 10000"
   },
   "author": "Peter Holman",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.19.0",
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "node-persist": "^3.1.0",
+    "uuid": "^8.2.0"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "chai-http": "^4.3.0",
+    "chai-uuid": "^1.0.6",
+    "mocha": "^8.0.1"
   }
 }
