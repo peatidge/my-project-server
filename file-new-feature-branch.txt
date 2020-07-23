@@ -1,3 +1,4 @@
 --this file has been added in the new feature branch
 
 --new line added in new feature branch
+--another new line added in new feature branch
