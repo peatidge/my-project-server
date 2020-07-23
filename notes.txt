@@ -61,7 +61,9 @@ get-content ./.git/refs/heads/name_of_my_new_branch
 git checkout name_of_my_new_branch
 --merge branch (first step is to checkout the branch you are going to merge into *this is good practice to ensure you have the latest remote verson)
 git checkout master
---then run
+--then run the merge command to bring in
+git merge 
+
 
 
 
