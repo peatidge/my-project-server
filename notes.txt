@@ -78,8 +78,7 @@ git show --color-words
 git mergetool
 --resolve changes and then use command :wqa to save changes
 --after this run a new commit and use git push/pull
-
-
+-- https://gist.github.com/karenyyng/f19ff75c60f18b4b8149 (working with git merges)
 
 
 
