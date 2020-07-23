@@ -1,0 +1,68 @@
+ NOTE: to exit git cmd enter q
+--adding (staging files for a commit)
+--git add all files
+git add .
+--add a specific file
+git add specific-file.txt
+--git commit to repository
+git commit -m "this is a commit"
+---using git log
+git log
+---using git status
+git status
+---untracked files
+git status -u
+---view all options for status
+git status -h
+--view current location of HEAD
+ cd .git
+ get-content HEAD
+ get-content refs/heads/master
+ --git diff (view changes)
+ git diff
+ git diff --staged (staged files only)
+ --undo changes (git checkout)
+ git checkout -- server.js (checkout specific file in the current branch *note -- indicates the current working branch)
+ git reset HEAD server.js (unstage staged file(s), after unstaging use git checkout to reset back to remote repository current head)
+ --amend commits
+ first add changes to staged (git add)
+ then run command
+ git commit --amend -m "updated commit messaged"
+ *NOTE: git only allows amending the most recent commit (edits which undo changes should be a new commit)
+ --view commit 
+ git show [sha]
+ --revert a commit
+ git revert [sha]
+ --ancestry (to get a parent commit use the caret ^ ) e.g. 
+ de14621f^ (by sha)
+ HEAD ^ (by HEAD)
+ master^ (by branch)
+ --to show grandparent add another caret e.g.
+ HEAD^^
+ --or use the tilde ~ with a number as short hand e.g.
+ HEAD~1 (parent)
+ HEAD~2 (grandparent)
+ HEAD~3 (great grand parent)
+ git show master~3
+ --to view a tree (list files [hash for a tree])
+git ls-tree master (by branch)
+git ls-tree [sha] (by commit)
+--show branches
+git branch
+--create a new branch
+git branch name_of_my_new_branch
+*NOTE: head is still pointing to the exiting branch i.e. view 
+--view head refs 
+dir .\.git\refs\heads\
+get-content ./.git/refs/heads/master
+get-content ./.git/refs/heads/name_of_my_new_branch
+*NOTE both are pointing to the same commit in the master branch
+--switch to another branch
+git checkout name_of_my_new_branch
+--merge branch (first step is to checkout the branch you are going to merge into *this is good practice to ensure you have the latest remote verson)
+git checkout master
+--then run
+
+
+
+

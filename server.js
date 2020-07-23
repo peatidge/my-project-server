@@ -2,15 +2,15 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const bookController = require('./controllers/bookController'); 
 
-let app = express();
-app.use(bodyParser.json());                                     
-app.use(bodyParser.urlencoded({extended: true}));                                                
-app.use(bodyParser.json()); 
+let server = express();
+server.use(bodyParser.json());                                                                                  
+server.use(express.json()); 
 
-app.route('/books')
+server.route('/books')
     .get(bookController.getBooks)
-    .post(bookController.postBook); 
+    .post(bookController.postBook)
+    .put(bookController.putBook); 
     
-app.listen(4000,()=>{}); 
+server.listen(4000,()=>{}); 
 
-module.exports = app; 
+module.exports = server; 

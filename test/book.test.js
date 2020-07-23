@@ -7,6 +7,7 @@ chai.use(require('chai-http'));
 chai.use(require('chai-uuid'));
 
 describe('/GET books', () => {
+
     it('it should GET all the books', (done) => {
       chai.request(server)
           .get('/books')
@@ -16,9 +17,11 @@ describe('/GET books', () => {
             done();
           });
     });
+
 });
 
 describe('/POST books', () => {
+
   it('it should return status of 201', (done) => {
 
     let book = { title: "The Lord of the Rings", author: "J.R.R. Tolkien", year: 1954,pages:3000 };
@@ -43,5 +46,16 @@ describe('/POST books', () => {
         });
   });
 
+  it('it should return an updated object', (done) => {
+
+    let book = { title: "The Hobbit", author: "J.R.R. Tolkien", year: 1954,pages:3000 };
+    chai.request(server)
+        .put('/books')
+        .send(book)
+        .end((error, response) => {
+          expect(response.body.id).to.be.a.uuid('v4');
+          done();
+        });
+  });
 
 });
