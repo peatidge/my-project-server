@@ -74,6 +74,11 @@ git merge --abort
 --or resolve conflicts by going to the actual files and updating the conflict to the target state of the file
 git show --color-words
 --and then resolve the conflicts manually in the file
+--use git merge tool
+git mergetool
+--resolve changes and then use command :wqa to save changes
+--after this run a new commit and use git push/pull
+
 
 
 
