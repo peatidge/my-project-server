@@ -56,9 +56,11 @@ git branch name_of_my_new_branch
 dir .\.git\refs\heads\
 get-content ./.git/refs/heads/master
 get-content ./.git/refs/heads/name_of_my_new_branch
+get-content ./.git/refs/heads/this_is_a_new_feature
 *NOTE both are pointing to the same commit in the master branch
 --switch to another branch
 git checkout name_of_my_new_branch
+git checkout this_is_a_new_feature
 --merge branch (first step is to checkout the branch you are going to merge into *this is good practice to ensure you have the latest remote verson)
 git checkout master
 --then run the merge command to bring in
